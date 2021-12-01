@@ -20,7 +20,7 @@ body {
   padding: 1rem;
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 9rem [sidebar-end full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -37,7 +37,7 @@ body {
 
 .heading-3 {
   font-size: 1.6rem;
-  color: #c69963;
+  color: #323151;
   text-transform: uppercase; }
 
 .heading-4 {
@@ -48,7 +48,7 @@ body {
     color: #54483a; }
 
 .btn {
-  background-color: #c69963;
+  background-color: #323151;
   color: white;
   border: none;
   padding: 1.6rem 3rem;
@@ -56,7 +56,7 @@ body {
   transition: all 0.2s;
   text-transform: uppercase; }
   .btn:hover {
-    background-color: #b28451; }
+    background-color: #6f6d9c; }
 
 .mb-sm {
   margin-bottom: 2rem; }
@@ -71,7 +71,7 @@ body {
   margin-bottom: 8rem; }
 
 .sidebar {
-  background-color: #c69963;
+  background-color: #323151;
   grid-row: 1/-1;
   grid-column: sidebar-start/sidebar-end; }
 
@@ -99,15 +99,15 @@ body {
       grid-row: 1 / span 2;
       width: 3rem;
       height: 3rem;
-      fill: #c69963;
+      fill: #323151;
       transform: translateY(-0.5rem); }
     .features .feature__text {
       font-size: 1.5rem; }
 
 .story__pictures {
-  background-color: #c69963;
+  background-color: #323151;
   grid-column: full-start/col-start 5;
-  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(178, 132, 81, 0.5)), url(../img/back.jpg);
+  background-image: linear-gradient(rgba(50, 49, 81, 0.5), rgba(111, 109, 156, 0.5)), url(../img/back.jpg);
   background-size: cover;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
@@ -157,7 +157,7 @@ body {
     position: absolute;
     width: 3rem;
     height: 3rem;
-    fill: #c69963;
+    fill: #323151;
     top: 1.5rem;
     right: 2rem; }
   .home__name {
@@ -189,7 +189,7 @@ body {
       height: 2rem;
       margin-bottom: 1rem;
       margin-right: 0.5rem;
-      fill: #c69963; }
+      fill: #323151; }
   .home__location {
     grid-row: 4/5;
     grid-column: 1/2; }
@@ -267,3 +267,30 @@ body {
 .footer {
   background-color: #101d2c;
   grid-column: full-start/full-end; }
+  .footer .nav {
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+    transition: all 0.5s;
+    list-style: none; }
+    .footer .nav__link:link, .footer .nav__link:visited {
+      padding: 1.5rem;
+      font-size: 1.4rem;
+      font-family: "Josefin Sans", sans-serif;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      transition: all 0.2s; }
+    .footer .nav__link:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      transform: translateY(-1.5rem); }
+  .footer .copyright {
+    margin: 2rem;
+    color: #6d5d4b; }
+  .footer .linkedin-link {
+    text-decoration: none;
+    color: white; }

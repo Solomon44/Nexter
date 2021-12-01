@@ -1,6 +1,6 @@
 // COLOR VARIABLES
-$color-primary: #c69963;
-$color-primary-dark: #b28451;
+$color-primary: #323151;
+$color-primary-dark: rgb(111, 109, 156);
 
 $color-secondary: #101d2c;
 
@@ -38,7 +38,7 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns:
-    [sidebar-start] 8rem[sidebar-end full-start] minmax(2rem, 1fr)
+    [sidebar-start]9rem[sidebar-end full-start] minmax(2rem, 1fr)
     [center-start]
     repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(2rem, 1fr) [full-end];
