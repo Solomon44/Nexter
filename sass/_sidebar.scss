@@ -34,6 +34,15 @@
     }
   }
 
+  @media only screen and (max-width: $bp-small) {
+    &::before {
+      transform: translateY(-0.8rem);
+    }
+    &::after {
+      transform: translateY(0.7rem);
+    }
+  }
+
   &::before,
   &::after {
     background-color: #fff;
