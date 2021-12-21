@@ -16,6 +16,6 @@
 4. Use of CSS Color variables
 5. Color-gradients
 6. CSS Grids
-7. Background Images, Background Videos and more....
+7. Background Images, Background Videos and more.....
 
 ---
