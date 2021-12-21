@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -19,7 +22,14 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 9rem [sidebar-end full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 6rem calc(100vh - 6rem); } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -106,8 +116,10 @@ body {
   background-color: #101d2c;
   grid-column: full-start/col-start 7;
   padding: 8rem;
+  padding-top: 4rem;
   display: grid;
-  grid-template-rows: 1fr min-content max-content 1fr;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center;
   background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
@@ -119,29 +131,53 @@ body {
   .header__seenon-text {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
-    grid-gap: 1.5rem;
+    grid-column-gap: 1.5rem;
     align-items: center;
-    text-align: center;
-    color: #aaa;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    color: #aaa; }
     .header__seenon-text::before, .header__seenon-text::after {
       content: '';
       height: 1px;
+      display: block;
       background-color: currentColor; }
   .header__seenon-logos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 3rem; }
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 1.5rem; }
     .header__seenon-logos img {
       height: 2.5rem;
+      max-width: 100%;
       filter: brightness(70%); }
   .header__btn {
     justify-self: start;
     align-self: center; }
 
 .realtors {
-  background-color: #c69963;
-  grid-column: col-start 7 / full-end; }
+  background-color: #101d2c;
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-gap: 2rem;
+  justify-items: center; }
+  .realtors__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 5vh; }
+  .realtors__img {
+    width: 7rem;
+    border-radius: 50%;
+    display: block; }
+  .realtors__sold {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-top: -3px; }
 
 .features {
   grid-column: center-start/center-end;
